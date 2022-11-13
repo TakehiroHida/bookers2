@@ -5,7 +5,7 @@ class BookController < ApplicationController
   
   def create
     @book = Book.new(book_paramas)
-    @book.user_id = current_user.id
+    @book.user_id = current_user.id)
     @book.save
     redirect_to book_path
   end
