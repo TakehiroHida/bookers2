@@ -1,13 +1,13 @@
-class BookController < ApplicationController
+class BooksController < ApplicationController
   def new
     @book = Book.new
   end
   
   def create
     @book = Book.new(book_paramas)
-    @book.user_id = current_user.id)
+    @book.user_id = current_user.id
     @book.save
-    redirect_to book_path
+    redirect_to root_path
   end
 
   def show
