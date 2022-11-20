@@ -5,6 +5,7 @@
     <%= @user.name %>
     <p>introduction</p>
     <%= @user.introduction %>
+    <p><%= link_to "icon", edit_user_path %></p>
 </div>
 
 <div>
@@ -26,7 +27,7 @@
     <% @books.each do |book| %>
     <tr>
         <td><%= image_tag post_image.user.get_profile_image(100,100) %></td>
-        <td><%= book.title %></td>
+        <td><%= link_to  %></td>
         <td><%= book.opinion %></td>
     </tr>
     <% end %>
