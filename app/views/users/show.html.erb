@@ -1,15 +1,7 @@
-<h1>Uesr info</h1>
-    <%= image_tag @user.get_profile_image(100,100) %>
-    <P>name</P>
-    <%= @user.name %>
-    <p>introduction</p>
-    <%= @user.introduction %>
-    <p><%= link_to "icon", edit_user_path %></p>
-
+<%= render 'users/user', user: @user %>
 
 <%= render 'books/new', book: @book %>
    
-
 <h1>Books</h1>
 <table>
     <tr>
