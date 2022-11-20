@@ -15,6 +15,12 @@
       <a href="https://cb40e290c0174db282fb96d202773fe8.vfs.cloud9.ap-northeast-1.amazonaws.com">Bookers</a>
       <% if user_signed_in? %>
         <li>
+          <%= link_to "Home", user_path(current_user.id) %>
+        </li>
+        <li>
+          <%= link_to "Users", users_path %>
+        </li>
+        <li>
           <%= link_to "Log out", destroy_user_session_path, method: :delete %>
         </li>
       <% else %>
