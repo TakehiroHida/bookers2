@@ -1,2 +1,12 @@
-<h1>Book#show</h1>
-<p>Find me in app/views/book/show.html.erb</p>
+<%= render 'users/user', user: @book.user %>
+
+<%= render 'books/new', book: @user %>
+
+<h1>Book detail</h1>
+<p><%= image_tag @book.user.get_profile_image(100,100) %><br>
+    <%= link_to "#{@book.user.name}", user_path(@book.user.id) %>
+</p>
+<p><%= link_to "#{@book.title}", book_path %></p>
+<p><%= @book.body %></p>
+<%= link_to "edit", edit_book_path %>
+<%= link_to "destroy", book_path(@book.id), method: :delete, "data-confirm" => "本当に削除しますか？" %>
