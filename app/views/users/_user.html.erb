@@ -4,4 +4,8 @@
     <%= user.name %>
     <p>introduction</p>
     <%= user.introduction %>
-    <p><%= link_to "icon", edit_user_path(user) %></p>
+    <% if user == current_user %>
+        <p><%= link_to "icon", edit_user_path(user) %></p>
+    <% else %>
+        <p><%= link_to "icon", user_path(current_user) %></p>
+    <% end %>
