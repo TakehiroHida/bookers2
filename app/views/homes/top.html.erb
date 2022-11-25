@@ -1,10 +1,15 @@
 <%= flash[:notice] %>
 
-<h1>welcome to Bookers!!!</h1>
-
-<p>このBookersでは様々なのあなたの意見や感想を他者と共有することができます！</p>
-
-<%= link_to "Log in", new_user_session_path %><br>
-
-<%= link_to "Sign up", new_user_registration_path %>
-
+<div class="container">
+    <div class="row">
+        <div class="mx-auto col-11"></div>
+            <h1>welcome to Bookers!!!</h1>
+            
+            <p>このBookersでは様々なのあなたの意見や感想を他者と共有することができます！</p>
+            
+            <%= link_to "Log in", new_user_session_path, class:"mx-auto",style:"width: 50px;" %><br>
+            
+            <%= link_to "Sign up", new_user_registration_path %>
+        </div>
+    </div>
+</div>

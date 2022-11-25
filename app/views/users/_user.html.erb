@@ -1,7 +1,13 @@
 <h1>Uesr info</h1>
     <%= image_tag user.get_profile_image(100,100) %>
-    <P>name</P>
-    <%= user.name %>
-    <p>introduction</p>
-    <%= user.introduction %>
+    
+    <table class="table">
+        <tr>
+            <th>name</th> <th><%= user.name %></th>
+        </tr>
+        <tr>
+            <th>introduction</th> <th><%= user.introduction %></th>
+        </tr>
+    </table>
+    
     <p><%= link_to "icon", edit_user_path(user) %></p>
